@@ -1,0 +1,35 @@
+/**
+
+    @font-family
+
+*/
+
+@font-face {
+    font-family: 'IRANYekanX-Regular';
+    src: url(../fonts/iranYekanx/IRANYekanXFaNum-Regular.woff) format('woff2');
+}
+
+@font-face {
+    font-family: 'IRANYekanX-Medium';
+    src: url(../fonts/iranYekanx/IRANYekanXFaNum-Medium.woff) format('woff2');
+}
+
+@font-face {
+    font-family: 'IRANYekanX-Light';
+    src: url(../fonts/iranYekanx/IRANYekanXFaNum-Light.woff) format('woff2');
+}
+
+@font-face {
+    font-family: 'IRANYekanX-Bold';
+    src: url(../fonts/iranYekanx/IRANYekanXFaNum-Bold.woff) format('woff2');
+}
+
+@font-face {
+    font-family: 'IRANYekanX-Black';
+    src: url(../fonts/iranYekanx/IRANYekanXFaNum-Black.woff) format('woff2');
+}
+
+@font-face {
+    font-family: 'IRANYekanX-ExtraBlack';
+    src: url(../fonts/iranYekanx/IRANYekanXFaNum-ExtraBlack.woff) format('woff2');
+}
