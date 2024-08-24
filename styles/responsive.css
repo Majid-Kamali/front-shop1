@@ -4,6 +4,17 @@
 
 @media screen and (max-width:992px) {}
 
-@media screen and (max-width:768px) {}
+@media screen and (max-width:768px) {
+    .toolbar__mobile-menu-icon{
+        display: block;
+        width: none;
+    }
+    .toolbar__nav{
+        display: none;
+    }
+    .search{
+        display: none;
+    }
+}
 
 @media screen and (max-width:576px) {}
