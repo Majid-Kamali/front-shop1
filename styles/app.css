@@ -43,6 +43,7 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     background-color: var(--color-white);
+    scroll-behavior: smooth;
 }
 
 
@@ -57,8 +58,25 @@ body {
     display: none;
 }
 
-.block {
-    display: block;
+.loader-animation {
+    border: 8px solid #f3f3f3;
+    /* Light grey */
+    border-top: 8px solid var(--primary-color);
+    /* Blue */
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /**
@@ -206,15 +224,55 @@ body {
     fill: var(--primary-color);
 }
 
+.search__bar__loading {
+    position: absolute;
+    right: 0;
+    top: 6.7rem;
+    opacity: 0;
+    max-height: 0;
+    display: flex;
+    flex-grow: 1;
+    max-width: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+    visibility: hidden;
+    padding: 1.9rem 1.5rem;
+    color: var(--primary-color);
+    border-radius: var(--border-radius);
+    background-color: var(--color-gray);
+    font-family: var(--font-IRAN-yekan-x-medium);
+    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search__bar__loading.open {
+    opacity: 1;
+    visibility: visible;
+    max-height: 7rem;
+    width: 100%;
+}
+
 .search__results {
     position: absolute;
     right: 0;
-    top: 6.2rem;
-    width: inherit;
+    top: 6.7rem;
     max-width: 100%;
     padding: 1.9rem 1.5rem;
     border-radius: var(--border-radius);
     background-color: var(--color-gray);
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+}
+
+.search__results.open {
+    opacity: 1;
+    visibility: visible;
+    max-height: 44rem;
 }
 
 .search__results__header {}
@@ -263,9 +321,6 @@ body {
     aspect-ratio: 3/3;
     object-fit: contain;
     border-radius: var(--border-radius);
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     border: solid .1vw #00000010;
 }
 
@@ -284,29 +339,35 @@ body {
     max-width: 33rem;
     white-space: normal;
     text-overflow: ellipsis;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-family: var(--font-IRAN-yekan-x-bold);
+    font-weight: 600;
+    line-height: 1.6rem;
 }
 
 .search__results__list__card__content__description {
     max-width: 33rem;
     white-space: normal;
     text-overflow: ellipsis;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-family: var(--font-IRAN-yekan-x-medium);
+    font-weight: 500;
+    line-height: 1.4rem;
     max-height: 3.8rem;
     overflow: hidden;
 }
 
 .search__results__list__card__content__price {
     font-family: var(--font-IRAN-yekan-x-bold);
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .search__results__list__card__content__rating {
     font-family: var(--font-IRAN-yekan-x-bold);
     font-size: 1.1rem;
     margin-left: 1rem;
+    font-weight: 600;
 }
 
 .search__results__footer {

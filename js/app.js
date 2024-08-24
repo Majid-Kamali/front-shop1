@@ -4,6 +4,7 @@ const typingDelay = 300;
 const searchInput = document.querySelector('#search-input');
 const searchBtn = document.querySelector('.search__bar__btn');
 const searchResults = document.querySelector('.search__results');
+const loadingIndicator = document.querySelector('#loading-indicator');
 
 searchInput.addEventListener('input', () => {
 
@@ -11,6 +12,8 @@ searchInput.addEventListener('input', () => {
 
     if (query.length >= 3) {
         clearTimeout(typingTimer);
+
+        loadingIndicator.classList.add('open');
 
         typingTimer = setTimeout(() => {
             fetchResults(query);
@@ -32,18 +35,25 @@ function fetchResults(query) {
     fetch('https://fakestoreapi.com/products?limit=3')
         .then(response => response.json())
 
-        .then(data => displayResults(data))
-        .catch(error => console.error('Error fetching data:', error));
+        .then(data => {
+            loadingIndicator.classList.remove('open');
+            displayResults(data)
+        })
+        .catch(error => {
+            loadingIndicator.classList.remove('open');
+            console.error('Error fetching data:', error)
+        });
 }
 
 function displayResults(results) {
-   
+
     const resultsHeader = document.querySelector('.search__results__header');
     const resultsList = document.querySelector('.search__results__list');
     resultsHeader.innerHTML = ''
     resultsList.innerHTML = ''
-    searchResults.classList.replace('hidden','block');
-    
+
+    searchResults.classList.add('open');
+
 
     resultsHeader.innerHTML = `
        <a class="search__results__header__count" href="#">${results.length}تعداد نتیجه یافت شده</a>    
@@ -72,11 +82,11 @@ function displayResults(results) {
         `);
     });
 
-  
+
 }
 
 function clearResults() {
-    searchResults.classList.replace('block','hidden');
+    searchResults.classList.remove('open');
 
     const resultsHeader = document.querySelector('.search__results__header');
     const resultsList = document.querySelector('.search__results__list');
