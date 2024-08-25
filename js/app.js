@@ -1,14 +1,39 @@
 let typingTimer;
 const typingDelay = 300;
 
-const searchInput = document.querySelector('#search-input');
-const searchBtn = document.querySelector('.search__bar__btn');
-const searchResults = document.querySelector('.search__results');
-const loadingIndicator = document.querySelector('#loading-indicator');
+// search
+const isMobile = window.innerWidth <= 768;
+const searchInput = isMobile ? document.querySelector('#mobile-search-bar-input') : document.querySelector('#desktop-search-bar-input');
+const searchBtn = isMobile ? document.querySelector('#mobile-search-bar-btn') : document.querySelector('#desktop-search-bar-btn');
+const searchResultsBox = isMobile ? document.querySelector('#mobile-search-results') : document.querySelector('#desktop-search-results');
+const loadingIndicator = isMobile ? document.querySelector('#mobile-search-loading') : document.querySelector('#desktop-search-loading');
+const searchHeader = isMobile ? document.querySelector('#mobile-search-results-header') : document.querySelector('#desktop-search-results-header');
+const searchList = isMobile ? document.querySelector('#mobile-search-results-list') : document.querySelector('#desktop-search-results-list');
+
+// mobile menu 
+const mobileMenuBtn = document.querySelector('.toolbar__mobile-menu-icon');
+const mobileMenuNav = document.querySelector('.header__mobile-nav');
+const mobileMenuNavCloseIcon = document.querySelector('.header__mobile-nav__header__close-icon');
+
+
+
+
+/**
+ * 
+ *  search data in product event and function
+ * 
+ */
 
 searchInput.addEventListener('input', () => {
+    search(searchInput)
+});
 
-    const query = searchInput.value.trim();
+searchBtn.addEventListener('click', () => {
+    search(searchInput)
+});
+
+function search(inputValue) {
+    const query = inputValue.value.trim();
 
     if (query.length >= 3) {
         clearTimeout(typingTimer);
@@ -20,15 +45,9 @@ searchInput.addEventListener('input', () => {
         }, typingDelay);
 
     } else {
-        clearResults();
+        clearResults(searchResultsBox, searchHeader, searchList);
     }
-
-});
-
-searchBtn.addEventListener('enter', () => {
-    console.log("event");
-});
-
+}
 
 function fetchResults(query) {
     // fetch(`/search?q=${query}`)
@@ -37,7 +56,7 @@ function fetchResults(query) {
 
         .then(data => {
             loadingIndicator.classList.remove('open');
-            displayResults(data)
+            displayResults(data, searchResultsBox, searchHeader, searchList)
         })
         .catch(error => {
             loadingIndicator.classList.remove('open');
@@ -45,35 +64,32 @@ function fetchResults(query) {
         });
 }
 
-function displayResults(results) {
+function displayResults(productData, searchResultBox, header, list) {
 
-    const resultsHeader = document.querySelector('.search__results__header');
-    const resultsList = document.querySelector('.search__results__list');
-    resultsHeader.innerHTML = ''
-    resultsList.innerHTML = ''
+    header.innerHTML = ''
+    list.innerHTML = ''
 
-    searchResults.classList.add('open');
+    searchResultBox.classList.add('open');
 
-
-    resultsHeader.innerHTML = `
-       <a class="search__results__header__count" href="#">${results.length}تعداد نتیجه یافت شده</a>    
+    header.innerHTML = `
+       <a class="search__results__header__count" href="#">${productData.length}تعداد نتیجه یافت شده</a>    
     `
-    results.forEach(result => {
-        resultsList.insertAdjacentHTML('beforeend', `
+    productData.forEach(productData => {
+        list.insertAdjacentHTML('beforeend', `
             
              <a href="#" class="search__results__list__card">
                 <div class="search__results__list__card__thumbnail">
-                    <img class="search__results__list__card__thumbnail__img" src="${result.image}"
-                        alt="${result.title}">
+                    <img class="search__results__list__card__thumbnail__img" src="${productData.image}"
+                        alt="${productData.title}">
                 </div>
                 <div class="search__results__list__card__content">
                     
-                        <h5 class="search__results__list__card__content__title">${result.title}</h5>
+                        <h5 class="search__results__list__card__content__title">${productData.title}</h5>
                         <p class="search__results__list__card__content__description">
-                            ${result.description}</p>
+                            ${productData.description}</p>
                     <p> 
-                        <span class="search__results__list__card__content__rating">🥇 ${result.rating.rate}</span>
-                        <span class="search__results__list__card__content__price">${result.price}  تومان </span>
+                        <span class="search__results__list__card__content__rating">🥇 ${productData.rating.rate}</span>
+                        <span class="search__results__list__card__content__price">${productData.price}  تومان </span>
                     </p>
                   
                 </div>
@@ -85,18 +101,24 @@ function displayResults(results) {
 
 }
 
-function clearResults() {
-    searchResults.classList.remove('open');
-
-    const resultsHeader = document.querySelector('.search__results__header');
-    const resultsList = document.querySelector('.search__results__list');
-    // const resultsFooter = document.querySelector('.search__results__footer');
-    resultsHeader.innerHTML = ''
-    resultsList.innerHTML = ''
-    // resultsFooter.innerHTML=''
+function clearResults(searchResultBox, header, list) {
+    searchResultBox.classList.remove('open');
+    header.innerHTML = ''
+    list.innerHTML = ''
 }
 
+/**
+ * 
+ *  mobile menu btn 
+ * 
+ */
 
+mobileMenuBtn.addEventListener('click', () => {
+    mobileMenuNav.classList.add('header__mobile-nav--open')
+})
 
+mobileMenuNavCloseIcon.addEventListener('click', () => {
+    mobileMenuNav.classList.remove('header__mobile-nav--open')
+})
 
 

@@ -59,10 +59,8 @@ body {
 }
 
 .loader-animation {
-    border: 8px solid #f3f3f3;
-    /* Light grey */
-    border-top: 8px solid var(--primary-color);
-    /* Blue */
+    border: .8rem solid #f3f3f3;
+    border-top: .8rem solid var(--primary-color);
     border-radius: 50%;
     width: 5rem;
     height: 5rem;
@@ -86,7 +84,9 @@ body {
 */
 
 .header {
-    background-color: #eee;
+    /* background-color: #eee; */
+    position: relative;
+    top: 0;
 }
 
 .header__nav {
@@ -131,9 +131,10 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: var(--color-white);
-    box-shadow: 0px 12px 48px 0px rgba(0, 0, 0, 0.07);
+    box-shadow: 0rem 1.2rem 4.8rem 0rem rgba(0, 0, 0, 0.07);
     padding: 1.4rem;
     border-radius: var(--border-radius);
+    /* position: sticky; */
 }
 
 .toolbar__right {
@@ -147,9 +148,44 @@ body {
 
 
 
-.toolbar__mobile-menu-icon {
+.toolbar__right__mobile-menu-icon {
     display: none;
+    cursor: pointer;
+    width: 8.2rem;
+    height: 8.2rem;
+    justify-content: center;
+    align-items: center;
 }
+
+.toolbar__right__mobile-menu-icon__line {
+    display: block;
+    width: 5rem;
+    height: .5rem;
+    border-radius: 2rem;
+    background-color: var(--primary-color);
+    position: relative;
+}
+
+.toolbar__right__mobile-menu-icon__line::before {
+    top: -0.9rem;
+    width: 2rem;
+}
+
+.toolbar__right__mobile-menu-icon__line::after {
+    top: 0.9rem;
+    width: 2rem;
+}
+
+.toolbar__right__mobile-menu-icon__line::before,
+.toolbar__right__mobile-menu-icon__line::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: .5rem;
+    border-radius: 2rem;
+    background-color: var(--primary-color);
+}
+
 
 .toolbar__nav {
     font-family: var(--font-IRAN-yekan-x-medium);
@@ -172,6 +208,16 @@ body {
     color: var(--color-secondary);
 }
 
+
+.toolbar__center {
+    display: none;
+}
+
+.toolbar__center__logo__img {
+    width: 12.7rem;
+    height: 5.7rem;
+}
+
 .toolbar__left {
     flex-basis: 40%;
     flex-grow: 0;
@@ -181,6 +227,8 @@ body {
     align-items: center;
     width: 100%;
 }
+
+
 
 .search {
     display: flex;
@@ -224,7 +272,7 @@ body {
     fill: var(--primary-color);
 }
 
-.search__bar__loading {
+.search__loading {
     position: absolute;
     right: 0;
     top: 6.7rem;
@@ -247,7 +295,7 @@ body {
     align-items: center;
 }
 
-.search__bar__loading.open {
+.search__loading.open {
     opacity: 1;
     visibility: visible;
     max-height: 7rem;
@@ -294,7 +342,7 @@ body {
     display: flex;
     padding: 1rem 0.5rem;
     background-color: var(--color-white);
-    box-shadow: 0px 12px 48px 0px rgba(0, 0, 0, 0.07);
+    box-shadow: 0rem 1.2rem 4.8rem 0rem rgba(0, 0, 0, 0.07);
     border-radius: var(--border-radius);
     overflow: hidden;
     margin-bottom: 1rem;
@@ -434,7 +482,7 @@ body {
     right: -.8rem;
     background-color: var(--color-accent);
     color: var(--color-white);
-    padding: 4px 8px;
+    padding: .4rem .8rem;
     text-align: center;
     border-radius: var(--border-radius);
     font-family: var(--font-IRAN-yekan-x-extra-bold);
@@ -443,3 +491,102 @@ body {
 
 
 .account__link {}
+
+.header__mobile-nav {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100vw;
+    height: 100vh;
+    padding: 0 1rem;
+    background-color: var(--color-white);
+    z-index: 9999;
+    transition: right 0.5s ease-in-out;
+}
+
+.header__mobile-nav--open {
+    right: 0;
+}
+
+.header__mobile-nav__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__mobile-nav__header__logo {
+    width: 21.4rem;
+    height: 9.2rem;
+}
+
+.header__mobile-nav__header__logo__img {
+    width: 100%;
+}
+
+.header__mobile-nav__header__close-icon {
+    background-color: var(--white);
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.header__mobile-nav__header__close-line {
+    display: block;
+    width: 3rem;
+    height: 0.3rem;
+    border-radius: 2rem;
+    background-color: var(--primary-color);
+    position: relative;
+}
+
+.header__mobile-nav__header__close-line::before,
+.header__mobile-nav__header__close-line::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 3rem;
+    height: 0.3rem;
+    border-radius: 2rem;
+    background-color: var(--primary-color);
+}
+
+.header__mobile-nav__header__close-line {
+    background-color: transparent;
+}
+
+.header__mobile-nav__header__close-line::before {
+    top: -0.8rem;
+    transform: translateY(8px) rotate(45deg);
+}
+
+.header__mobile-nav__header__close-line::after {
+    top: 0.8rem;
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.header__mobile-nav__search .search {
+    display: flex;
+    margin: 2rem 0;
+}
+
+.header__mobile-nav__menu {}
+
+.mobile-nav {}
+
+.mobile-nav__item {
+    padding: 1.3rem 2rem;
+    font-size: 1.6rem;
+    font-family: var(--font-IRAN-yekan-x);
+    font-weight: 400;
+    line-height: 2rem;
+}
+
+.mobile-nav__item__link {
+    color: var(--primary-color);
+    text-decoration: none;
+}

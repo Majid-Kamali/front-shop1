@@ -43,10 +43,9 @@
             </div>
             <div class="toolbar">
                 <div class="toolbar__right">
-                    <svg class="toolbar__mobile-menu-icon" height="24px" viewBox="0 -960 960 960" width="24px"
-                        fill="#5f6368">
-                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-                    </svg>
+                        <div class="toolbar__right__mobile-menu-icon">
+                            <div class="toolbar__right__mobile-menu-icon__line"></div>
+                        </div>
                     <nav class="toolbar__nav">
                         <ul class="toolbar__nav__list">
                             <li class="toolbar__nav__list__item">
@@ -64,12 +63,15 @@
                         </ul>
                     </nav>
                 </div>
+                <div class="toolbar__center">
+                    <img class="toolbar__center__logo__img" src="images/Logos/Logo-1.png" alt="Logo">
+                </div>
                 <div class="toolbar__left">
                     <div class="search">
                         <div class="search__bar">
-                            <input type="text" class="search__bar__input" id="search-input"
+                            <input type="text" class="search__bar__input" id="desktop-search-bar-input"
                                 placeholder="جستجوی محصولات  ...">
-                            <button class="search__bar__btn" aria-label="Search">
+                            <button class="search__bar__btn" id="desktop-search-bar-btn" aria-label="Search">
                                 <svg class="search__bar__btn__icon" height="24px" viewBox="0 -960 960 960" width="24px"
                                     fill="#5f6368">
                                     <path
@@ -77,12 +79,12 @@
                                 </svg>
                             </button>
                         </div>
-                        <div id="loading-indicator" class="search__bar__loading">
-                           <span class="loader-animation"></span>
+                        <div class="search__loading" id="desktop-search-loading">
+                            <span class="loader-animation"></span>
                         </div>
-                        <div id="search-results" class="search__results">
-                            <div class="search__results__header"></div>
-                            <div class="search__results__list"></div>
+                        <div class="search__results" id="desktop-search-results">
+                            <div class="search__results__header" id="desktop-search-results-header"></div>
+                            <div class="search__results__list" id="desktop-search-results-list"></div>
                             <div class="search__results__footer">
                                 <a class="search__results__footer__btn" href="#">مشاهده همه نتایج</a>
                             </div>
@@ -109,7 +111,61 @@
                     </div>
                 </div>
             </div>
-
+        </div>
+        <div class="header__mobile-nav">
+            <div class="header__mobile-nav__header">
+                <div class="header__mobile-nav__header__logo">
+                    <img class="header__mobile-nav__header__logo__img" src="images/Logos/Logo-1.png" alt="Logo">
+                </div>
+                <div class="header__mobile-nav__header__close-icon">
+                    <div class="header__mobile-nav__header__close-line"></div>
+                </div>
+            </div>
+            <div class="header__mobile-nav__search">
+                <div class="search">
+                    <div class="search__bar">
+                        <input type="text" class="search__bar__input" id="mobile-search-bar-input"
+                            placeholder="جستجوی محصولات  ...">
+                        <button class="search__bar__btn" id="mobile-search-bar-btn" aria-label="Search">
+                            <svg class="search__bar__btn__icon" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#5f6368">
+                                <path
+                                    d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="search__loading" id="mobile-search-loading">
+                        <span class="loader-animation"></span>
+                    </div>
+                    <div class="search__results" id="mobile-search-results">
+                        <div class="search__results__header" id="mobile-search-results-header"></div>
+                        <div class="search__results__list" id="mobile-search-results-list"></div>
+                        <div class="search__results__footer">
+                            <a class="search__results__footer__btn" href="#">مشاهده همه نتایج</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__mobile-nav__menu">
+                <ul class="mobile-nav">
+                    <li class="mobile-nav__item">
+                        <a href="#" class="mobile-nav__item__link">صفحه اصلی</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="#" class="mobile-nav__item__link">فروشگاه</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="#" class="mobile-nav__item__link">وبلاگ</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="#" class="mobile-nav__item__link">درباره ما </a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="#" class="mobile-nav__item__link">تماس با ما</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </header>
 
     <script src="./js/app.js"></script>

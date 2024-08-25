@@ -5,15 +5,62 @@
 @media screen and (max-width:992px) {}
 
 @media screen and (max-width:768px) {
-    .toolbar__mobile-menu-icon{
-        display: block;
-        width: none;
-    }
-    .toolbar__nav{
+
+    /**
+
+    ---toolbar
+
+    */
+    .header__nav {
         display: none;
     }
-    .search{
+
+    /**
+
+    ---toolbar
+
+    */
+    .toolbar {
+        background: #ffffff50;
+        backdrop-filter: blur(30px);
+    }
+
+    .toolbar__right {
+        flex: 1;
+    }
+
+    .toolbar__right__mobile-menu-icon {
+        display: flex;
+    }
+
+    .toolbar__nav {
         display: none;
+    }
+
+    .toolbar__center {
+        display: flex;
+        justify-content: center;
+        flex: 1;
+    }
+
+    .toolbar__left {
+        flex: 1;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .basket,
+    .account {
+        width: 8.7rem;
+        height: 8.7rem;
+    }
+
+    .basket__badge {
+        border-radius: 100%;
+        padding: 0.9rem;
+        width: 50%;
     }
 }
 
