@@ -98,16 +98,16 @@ body {
     font-size: 1.7rem;
 }
 
-.header__nav__logo {
+.header-logo {
     width: 7.9rem;
     height: 3.4rem;
 }
 
-.header__nav__logo__img {
+.header-logo__img {
     width: 100%;
 }
 
-.header__nav__menu {}
+.header-menu {}
 
 .main-nav {
     display: flex;
@@ -148,7 +148,7 @@ body {
 
 
 
-.toolbar__right__mobile-menu-icon {
+.toolbar-menu-icon {
     display: none;
     cursor: pointer;
     width: 8.2rem;
@@ -157,7 +157,7 @@ body {
     align-items: center;
 }
 
-.toolbar__right__mobile-menu-icon__line {
+.toolbar-menu-icon__line {
     display: block;
     width: 5rem;
     height: .5rem;
@@ -166,18 +166,18 @@ body {
     position: relative;
 }
 
-.toolbar__right__mobile-menu-icon__line::before {
+.toolbar-menu-icon__line::before {
     top: -0.9rem;
     width: 2rem;
 }
 
-.toolbar__right__mobile-menu-icon__line::after {
+.toolbar-menu-icon__line::after {
     top: 0.9rem;
     width: 2rem;
 }
 
-.toolbar__right__mobile-menu-icon__line::before,
-.toolbar__right__mobile-menu-icon__line::after {
+.toolbar-menu-icon__line::before,
+.toolbar-menu-icon__line::after {
     content: '';
     position: absolute;
     display: block;
@@ -187,24 +187,24 @@ body {
 }
 
 
-.toolbar__nav {
+.toolbar-nav {
     font-family: var(--font-IRAN-yekan-x-medium);
     font-size: 1.7rem;
 }
 
-.toolbar__nav__list {
+.toolbar-nav__list {
     display: flex;
     gap: 2rem;
 }
 
-.toolbar__nav__list__item {}
+.toolbar-nav__list__item {}
 
-.toolbar__nav__list__item__link {
+.toolbar-nav__list__item__link {
     color: var(--color-text);
     text-decoration: none;
 }
 
-.toolbar__nav__list__item__link:hover {
+.toolbar-nav__list__item__link:hover {
     color: var(--color-secondary);
 }
 
@@ -213,7 +213,9 @@ body {
     display: none;
 }
 
-.toolbar__center__logo__img {
+.toolbar-logo{}
+
+.toolbar-logo__img {
     width: 12.7rem;
     height: 5.7rem;
 }
@@ -492,7 +494,7 @@ body {
 
 .account__link {}
 
-.header__mobile-nav {
+.mobile-nav {
     position: absolute;
     top: 0;
     right: -100%;
@@ -504,26 +506,26 @@ body {
     transition: right 0.5s ease-in-out;
 }
 
-.header__mobile-nav--open {
+.mobile-nav--open {
     right: 0;
 }
 
-.header__mobile-nav__header {
+.mobile-nav__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.header__mobile-nav__header__logo {
+.mobile-nav__header__logo {
     width: 21.4rem;
     height: 9.2rem;
 }
 
-.header__mobile-nav__header__logo__img {
+.mobile-nav__header__logo__img {
     width: 100%;
 }
 
-.header__mobile-nav__header__close-icon {
+.mobile-nav__header__close-icon {
     background-color: var(--white);
     width: 5.5rem;
     height: 5.5rem;
@@ -535,7 +537,7 @@ body {
 }
 
 
-.header__mobile-nav__header__close-line {
+.mobile-nav__header__close-line {
     display: block;
     width: 3rem;
     height: 0.3rem;
@@ -544,8 +546,8 @@ body {
     position: relative;
 }
 
-.header__mobile-nav__header__close-line::before,
-.header__mobile-nav__header__close-line::after {
+.mobile-nav__header__close-line::before,
+.mobile-nav__header__close-line::after {
     content: '';
     position: absolute;
     display: block;
@@ -555,30 +557,30 @@ body {
     background-color: var(--primary-color);
 }
 
-.header__mobile-nav__header__close-line {
+.mobile-nav__header__close-line {
     background-color: transparent;
 }
 
-.header__mobile-nav__header__close-line::before {
+.mobile-nav__header__close-line::before {
     top: -0.8rem;
     transform: translateY(8px) rotate(45deg);
 }
 
-.header__mobile-nav__header__close-line::after {
+.mobile-nav__header__close-line::after {
     top: 0.8rem;
     transform: translateY(-8px) rotate(-45deg);
 }
 
-.header__mobile-nav__search .search {
+.mobile-nav__search .search {
     display: flex;
     margin: 2rem 0;
 }
 
-.header__mobile-nav__menu {}
+.mobile-nav__wrapper {}
 
-.mobile-nav {}
+.mobile-nav__wrapper__menu {}
 
-.mobile-nav__item {
+.mobile-nav__wrapper__menu__item {
     padding: 1.3rem 2rem;
     font-size: 1.6rem;
     font-family: var(--font-IRAN-yekan-x);
@@ -586,7 +588,7 @@ body {
     line-height: 2rem;
 }
 
-.mobile-nav__item__link {
+.mobile-nav__wrapper__menu__item__link {
     color: var(--primary-color);
     text-decoration: none;
 }

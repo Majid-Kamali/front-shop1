@@ -29,11 +29,11 @@
         flex: 1;
     }
 
-    .toolbar__right__mobile-menu-icon {
+    .toolbar-menu-icon {
         display: flex;
     }
 
-    .toolbar__nav {
+    .toolbar-nav {
         display: none;
     }
 

@@ -11,9 +11,9 @@ const searchHeader = isMobile ? document.querySelector('#mobile-search-results-h
 const searchList = isMobile ? document.querySelector('#mobile-search-results-list') : document.querySelector('#desktop-search-results-list');
 
 // mobile menu 
-const mobileMenuBtn = document.querySelector('.toolbar__mobile-menu-icon');
-const mobileMenuNav = document.querySelector('.header__mobile-nav');
-const mobileMenuNavCloseIcon = document.querySelector('.header__mobile-nav__header__close-icon');
+const mobileMenuBtn = document.querySelector('.toolbar-menu-icon');
+const mobileMenuNav = document.querySelector('.mobile-nav__header');
+const mobileMenuNavCloseIcon = document.querySelector('.mobile-nav__header__close-icon');
 
 
 
@@ -114,11 +114,11 @@ function clearResults(searchResultBox, header, list) {
  */
 
 mobileMenuBtn.addEventListener('click', () => {
-    mobileMenuNav.classList.add('header__mobile-nav--open')
+    mobileMenuNav.classList.add('mobile-nav--open')
 })
 
 mobileMenuNavCloseIcon.addEventListener('click', () => {
-    mobileMenuNav.classList.remove('header__mobile-nav--open')
+    mobileMenuNav.classList.remove('mobile-nav--open')
 })
 
 
