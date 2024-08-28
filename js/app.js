@@ -12,7 +12,7 @@ const searchList = isMobile ? document.querySelector('#mobile-search-results-lis
 
 // mobile menu 
 const mobileMenuBtn = document.querySelector('.toolbar-menu-icon');
-const mobileMenuNav = document.querySelector('.mobile-nav__header');
+const mobileMenuNav = document.querySelector('.mobile-nav');
 const mobileMenuNavCloseIcon = document.querySelector('.mobile-nav__header__close-icon');
 
 

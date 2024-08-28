@@ -158,7 +158,6 @@ body {
 }
 
 .toolbar-menu-icon__line {
-    display: block;
     width: 5rem;
     height: .5rem;
     border-radius: 2rem;
@@ -167,20 +166,20 @@ body {
 }
 
 .toolbar-menu-icon__line::before {
-    top: -0.9rem;
+    top: -1.2rem;
     width: 2rem;
 }
 
 .toolbar-menu-icon__line::after {
-    top: 0.9rem;
+    top: 1.2rem;
     width: 2rem;
+    left: 0;
 }
 
 .toolbar-menu-icon__line::before,
 .toolbar-menu-icon__line::after {
     content: '';
     position: absolute;
-    display: block;
     height: .5rem;
     border-radius: 2rem;
     background-color: var(--primary-color);
