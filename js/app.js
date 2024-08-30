@@ -121,6 +121,21 @@ mobileMenuNavCloseIcon.addEventListener('click', () => {
     mobileMenuNav.classList.remove('mobile-nav--open')
 })
 
+/**
+ * 
+ * slider plugin config
+ *  
+ */
+
+const swiper = new Swiper('.swiper', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
 
 
 /**
