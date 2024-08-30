@@ -122,3 +122,16 @@ mobileMenuNavCloseIcon.addEventListener('click', () => {
 })
 
 
+
+/**
+ * 
+ *  slider slide-wrapper before box-shadow
+ * 
+ */
+
+document.querySelectorAll('.slide-wrapper').forEach(function (element) {
+    var colorVariableName = element.getAttribute('data-color');
+    var colorValue = getComputedStyle(document.documentElement).getPropertyValue(colorVariableName).trim();
+    element.style.setProperty('--box-shadow-color', colorValue);
+});
+
