@@ -26,6 +26,7 @@ html {
     display: flex;
     flex-wrap: wrap;
 }
+
 /* 
 .row>* {
     padding-right: 15px;
@@ -378,7 +379,8 @@ html {
 @media (max-width: 576px) {
 
     .container {
-        max-width: 518px;
+        max-width: 88%;
+
     }
 
     .col-sm-1 {

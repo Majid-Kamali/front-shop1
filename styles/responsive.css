@@ -1,28 +1,192 @@
-@media screen and (max-width:1400px) {}
-
-@media screen and (max-width:1200px) {}
-
-@media screen and (max-width:992px) {}
-
-@media screen and (max-width:768px) {
+@media screen and (max-width:1400px) {
 
     /**
 
     ---toolbar
 
     */
-    .header__nav {
-        display: none;
+
+    .toolbar-nav {
+        font-size: 1.26rem;
+    }
+
+    .search__bar {
+        height: 3.6rem;
+    }
+
+    .search__bar__input {
+        width: 29rem;
+    }
+
+    .search__bar__btn {
+        line-height: 5.3rem;
+        padding-right: 0;
+        padding-left: .6rem;
+    }
+
+    .search__bar__btn__icon {
+        transform: scale(1.2);
+    }
+
+    .basket,
+    .account {
+        width: 3.6rem;
+        height: 3.6rem;
+    }
+
+    .basket__badge {
+        padding: 0.1rem 0.8rem;
+    }
+
+    .basket__link__icon,
+    .account__link__icon {
+        transform: scale(1.2);
     }
 
     /**
 
+    ---slider
+
+    */
+
+
+}
+
+@media screen and (max-width:1200px) {
+
+    /**
+
     ---toolbar
 
     */
+
+    .toolbar-nav {
+        font-size: 1.08rem;
+    }
+
+    .search__bar {
+        height: 3.1rem;
+    }
+
+    .search__bar__input {
+        width: 26rem;
+    }
+
+    .search__bar__btn {
+        line-height: 4.3rem;
+        padding-top: 2px;
+        padding-right: 0rem;
+        padding-left: .6rem;
+    }
+
+    .search__bar__btn__icon {
+        transform: scale(1);
+    }
+
+    .basket,
+    .account {
+        width: 3.1rem;
+        height: 3.1rem;
+    }
+
+    .basket__badge {
+        padding: 0.2rem 0 .2rem;
+        width: 1.5rem;
+    }
+
+    .basket__link__icon,
+    .account__link__icon {
+        transform: scale(1);
+    }
+
+    /**
+
+    ---slider
+
+    */
+
+
+
+}
+
+@media screen and (max-width:992px) {
+
+    /**
+
+    ---toolbar
+
+    */
+
+    .toolbar-nav {
+        font-size: 1.19rem;
+    }
+
+    .search__bar {
+        height: 3.1rem;
+    }
+
+    .search__bar__input {
+        width: 21rem;
+    }
+
+    .search__bar__btn {
+        line-height: 4.3rem;
+        padding-top: 0.2rem;
+    }
+
+    .search__bar__btn__icon {
+        transform: scale(.8);
+    }
+
+    .basket,
+    .account {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .basket__badge {
+        padding: 0;
+    }
+
+    .basket__link__icon,
+    .account__link__icon {
+        transform: scale(.8);
+    }
+
+    /**
+
+    ---slider
+
+    */
+
+
+
+}
+
+@media screen and (max-width:768px) {
+
+
+    /**
+
+    ---header navigation
+
+    */
+
+    .header__nav {
+        display: none;
+    }
+
+
+    /**
+
+    ---toolbar
+
+    */
+
     .toolbar {
         background: #ffffff50;
         backdrop-filter: blur(30px);
+        margin-top: 2rem;
     }
 
     .toolbar__right {
@@ -56,12 +220,141 @@
         width: 8.7rem;
         height: 8.7rem;
     }
+    .basket__link__icon, .account__link__icon {
+        transform: scale(2);
+    }
+
 
     .basket__badge {
         border-radius: 100%;
         padding: 0.9rem;
         width: 50%;
     }
+
+    /**
+
+    ---slider
+
+    */
+
 }
 
-@media screen and (max-width:576px) {}
+@media screen and (max-width:576px) {
+
+    /**
+
+    ---toolbar
+
+    */
+
+    .toolbar-menu-icon {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .toolbar-logo__img {
+        width: 10.6rem;
+        height: 4.4rem;
+    }
+
+    .basket,
+    .account {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .basket__link__icon, .account__link__icon {
+        transform: scale(1.7);
+    }
+
+    /**
+
+    ---slider
+
+    */
+
+}
+
+@media screen and (max-width:410px) {
+
+    /**
+
+    ---toolbar
+
+    */
+
+    .toolbar-menu-icon {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .toolbar-logo__img {
+        width: 7.3rem;
+        height: 3.1rem;
+    }
+
+    .basket,
+    .account {
+        width: 5.2rem;
+        height: 5.2rem;
+    }
+
+    .basket__link__icon, .account__link__icon {
+        transform: scale(1.3);
+    }
+
+    .basket__badge {
+        border-radius: 100%;
+        padding: 0.3rem;
+        width: 50%;
+    }
+
+    /**
+
+    ---slider
+
+    */
+
+}
+
+@media screen and (max-width:360px) {
+    
+    /**
+
+    ---toolbar
+
+    */
+
+    .toolbar-menu-icon {
+        width: 4.3rem;
+        height: 4.3rem;
+    }
+
+    .toolbar-logo__img {
+        width: 6.3rem;
+        height: 2.7rem;
+    }
+
+    .basket,
+    .account {
+        width: 4.6rem;
+        height: 4.6rem;
+    }
+
+    .basket__link__icon, .account__link__icon {
+        transform: scale(1);
+    }
+
+    .basket__badge {
+        border-radius: 100%;
+        padding: 0.2rem;
+        width: 50%;
+    }
+
+    /**
+
+    ---slider
+
+    */
+
+}
