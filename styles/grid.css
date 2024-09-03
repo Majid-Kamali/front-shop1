@@ -13,6 +13,7 @@ html {
     margin-right: auto;
     margin-left: auto;
     position: relative;
+    background-color: aliceblue;
 }
 
 
@@ -25,14 +26,8 @@ html {
 .row {
     display: flex;
     flex-wrap: wrap;
+    gap: 67.33px; 
 }
-
-/* 
-.row>* {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-bottom: 30px;
-} */
 
 .col {
     max-width: 100%;
@@ -379,8 +374,8 @@ html {
 @media (max-width: 576px) {
 
     .container {
-        max-width: 88%;
-
+        max-width: 100%;
+        padding: 0 15px;
     }
 
     .col-sm-1 {
