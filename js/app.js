@@ -150,3 +150,16 @@ document.querySelectorAll('.slide-wrapper').forEach(function (element) {
     element.style.setProperty('--box-shadow-color', colorValue);
 });
 
+
+
+/**
+ * 
+ *  banner banner-wrapper  bg-color
+ * 
+ */
+
+document.querySelectorAll('.banner__wrapper').forEach(function (element) {
+    var colorVariable = element.getAttribute('data-color');
+    element.style.setProperty('--bg-color', colorVariable);
+});
+

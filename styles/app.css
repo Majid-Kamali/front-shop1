@@ -143,7 +143,9 @@ body {
 }
 
 .btn {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--primary-color);
     color: var(--color-white);
     border-radius: 1.5rem;
@@ -153,6 +155,8 @@ body {
     transition: background .5s ease-in-out;
     cursor: pointer;
     text-align: center;
+    width: 17.2rem;
+    height: 5.2rem;
 }
 
 .btn:hover {
@@ -169,6 +173,13 @@ body {
 
 .btn--no-bg:hover {
     color: var(--color-secondary);
+}
+
+.arrow-icon {
+    margin-right: 1rem;
+    fill: var(--color-white);
+    width: 3.2rem;
+    height: 3.3rem;
 }
 
 .full-h {
@@ -190,6 +201,12 @@ body {
 .slider-margin-top {
     margin-top: calc(100vh - 685px);
 }
+
+.m-t-4{
+    margin-top: 4rem;
+}
+
+
 
 /**
 *
@@ -261,6 +278,7 @@ body {
     flex-shrink: 0;
 
 }
+
 .toolbar-menu-icon {
     display: none;
     cursor: pointer;
@@ -794,20 +812,6 @@ body {
     padding-top: 5rem;
 }
 
-.slide-content__btn__link {
-    padding: 1.9rem 3.8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.slide-content__btn__link__icon {
-    margin-right: 1rem;
-    fill: var(--color-white);
-    width: 3.2rem;
-    height: 3.3rem;
-}
-
 .slider-img-wrapper {
     width: 100%;
     max-width: 100%;
@@ -1001,7 +1005,7 @@ body {
 
 .product-card__footer__actions {}
 
-.product-card__footer__actions__icon{
+.product-card__footer__actions__icon {
     width: 5rem;
     height: 5rem;
     border-radius: var(--border-radius);
@@ -1024,4 +1028,49 @@ body {
 
 .product-card__footer__actions__like--active {
     fill: var(--color-accent);
+}
+
+/**
+*
+*   ---banner
+*
+*/
+
+.banner {}
+
+.banner__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-color);
+    height: 18rem;
+    border-radius: var(--border-radius);
+}
+
+.banner__info {
+    padding: 0 2rem;
+}
+
+.banner__info__title {
+    font-family: var(--font-IRAN-yekan-x-bold);
+    font-size: 2.2rem;
+    color: var(--primary-color);
+}
+
+.banner__info__description {
+    font-family: var(--font-IRAN-yekan-x);
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin: 1rem 0 2rem 0;
+}
+
+.banner__file {
+    width: 42rem;
+    height: 33.8rem;
+}
+
+.banner__file__img {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 4rem;
 }

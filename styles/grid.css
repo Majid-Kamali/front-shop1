@@ -13,7 +13,7 @@ html {
     margin-right: auto;
     margin-left: auto;
     position: relative;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
 }
 
 
@@ -26,7 +26,7 @@ html {
 .row {
     display: flex;
     flex-wrap: wrap;
-    gap: 67.33px; 
+    gap: 67px;
 }
 
 .col {
@@ -102,6 +102,10 @@ html {
 @media (max-width: 1400px) {
     .container {
         width: 1120px;
+    }
+
+    .row {
+        gap: 0px;
     }
 
     .col-xxl-1 {
@@ -376,6 +380,7 @@ html {
     .container {
         max-width: 100%;
         padding: 0 15px;
+
     }
 
     .col-sm-1 {

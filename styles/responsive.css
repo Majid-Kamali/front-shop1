@@ -90,14 +90,14 @@
         gap: 1.5rem;
     }
 
-    .slide-content__btn__link {
+    /* .slide-content__btn__link {
         padding: 1.3rem 2.8rem;
-    }
+    } */
 
-    .slide-content__btn__link__icon {
+    /* .slide-content__btn__link__icon {
         width: 2.2rem;
         height: 2.2rem;
-    }
+    } */
 
     .swiper-pagination {
         margin-bottom: 12rem;
@@ -233,14 +233,14 @@
         gap: 1.2rem;
     }
 
-    .slide-content__btn__link {
+    /* .slide-content__btn__link {
         padding: 1.2rem 2.6rem;
-    }
+    } */
 
-    .slide-content__btn__link__icon {
+    /* .slide-content__btn__link__icon {
         width: 2rem;
         height: 2rem;
-    }
+    } */
 
     .swiper-pagination {
         margin-bottom: 13rem;
@@ -388,14 +388,14 @@
         gap: 1rem;
     }
 
-    .slide-content__btn__link {
+    /* .slide-content__btn__link {
         padding: .9rem 2.1rem;
-    }
+    } */
 
-    .slide-content__btn__link__icon {
+    /* .slide-content__btn__link__icon {
         width: 1.6rem;
         height: 1.7rem;
-    }
+    } */
 
     .slider-img-wrapper {
         height: 52%;
@@ -693,14 +693,14 @@
         gap: .4rem;
     }
 
-    .slide-content__btn__link {
+    /* .slide-content__btn__link {
         padding: .8rem 1.8rem;
-    }
+    } */
 
-    .slide-content__btn__link__icon {
+    /* .slide-content__btn__link__icon {
         width: 1.4rem;
         height: 1.5rem;
-    }
+    } */
 
     .slider-img-wrapper {
         height: 35%;
@@ -817,14 +817,14 @@
         line-height: 1.6rem;
     }
 
-    .slide-content__btn__link {
+    /* .slide-content__btn__link {
         padding: .7rem 1.4rem;
-    }
+    } */
 
-    .slide-content__btn__link__icon {
+    /* .slide-content__btn__link__icon {
         width: 1.2rem;
         height: 1.4rem;
-    }
+    } */
 
     .slider-img-wrapper {
         height: 29%;
@@ -950,14 +950,14 @@
         padding-top: 1rem;
     }
 
-    .slide-content__btn__link {
+    /* .slide-content__btn__link {
         padding: .72rem 1.2rem;
-    }
+    } */
 
-    .slide-content__btn__link__icon {
+    /* .slide-content__btn__link__icon {
         width: 1.5rem;
         height: 1.5rem;
-    }
+    } */
 
     .slider-img-wrapper {
         height: 30%;
