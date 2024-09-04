@@ -1092,43 +1092,43 @@ body {
 
 .comments {}
 
-.comments-cart {
+.comments-card {
     box-shadow: 0rem 1.2rem 4.8rem 0rem rgba(0, 0, 0, 0.07);
     border-radius: var(--border-radius);
 }
 
-.comments-cart__header {
+.comments-card__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1rem;
 }
 
-.comments-cart__header__social {
+.comments-card__header__social {
     width: 4rem;
     height: 4rem;
     margin: 1rem;
 }
 
-.comments-cart__header__open-in {
+.comments-card__header__open-in {
     width: 2rem;
     height: 2rem;
     margin: 1rem;
 }
 
-.comments-cart__body {
+.comments-card__body {
     padding: 2rem 1rem;
     width: 33rem;
     line-height: 3rem;
     text-align: justify;
 }
 
-.comments-cart__body__comment {
+.comments-card__body__comment {
     font-family: var(--font-IRAN-yekan-x-light);
     font-size: 1.8rem;
 }
 
-.comments-cart__line{
+.comments-card__line {
     display: block;
     width: 96%;
     background-color: var(--color-gray);
@@ -1136,34 +1136,114 @@ body {
     margin: auto;
 }
 
-.comments-cart__footer {
-   
+.comments-card__footer {
+
     padding: 1rem 1rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-.comments-cart__footer__profile {
+.comments-card__footer__profile {
     width: 5rem;
-    margin-left:2rem;
+    margin-left: 2rem;
 }
 
-.comments-cart__footer__profile__img {
+.comments-card__footer__profile__img {
     width: 100%;
     border-radius: 100%;
 }
 
-.comments-cart__footer__info {
-   
-}
+.comments-card__footer__info {}
 
-.comments-cart__footer__info__username {
+.comments-card__footer__info__username {
     font-family: var(--font-IRAN-yekan-x-bold);
     font-size: 1.6rem;
 }
 
-.comments-cart__footer__info__datatime {
+.comments-card__footer__info__datatime {
     font-family: var(--font-IRAN-yekan-x);
     font-size: 1.3rem;
 }
+
+
+
+/**
+*
+*   ---weblog
+*
+*/
+
+.weblog {}
+
+.weblog-card {
+    box-shadow: 0rem 1.2rem 4.8rem 0rem rgba(0, 0, 0, 0.07);
+    border-radius: var(--border-radius);
+    width: 33rem;
+    padding: 1.2rem;
+}
+
+.weblog-card__header {}
+
+.weblog-card__header__img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+.weblog-card__body {}
+
+.weblog-card__body__title {
+    font-family: var(--font-IRAN-yekan-x-bold);
+    font-size: 1.8rem;
+}
+
+.weblog-card__body__info {
+   margin: 2rem 0;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+}
+
+.weblog-card__body__info__data-release {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-accent);
+    border-radius: var(--border-radius);
+    padding: .9rem;
+    margin-left:.7rem ;
+}
+
+.weblog-card__body__info__data-release__icon {
+    fill: #e66759;
+    margin: 0 .2rem;
+}
+
+.weblog-card__body__info__username {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: .9rem;
+}
+
+.weblog-card__body__info__username__icon {
+    fill: #4c4d4e;
+    margin: 0 .2rem;
+}
+
+.weblog-card__body__description {
+    font-family: var(--font-IRAN-yekan-x-light);
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.weblog-card__footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.weblog-card__footer__link {}
