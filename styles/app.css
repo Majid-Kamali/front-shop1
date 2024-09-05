@@ -1392,3 +1392,111 @@ body {
     font-size: 1.7rem;
     color: var(--primary-color);
 }
+
+
+/**
+*
+*   ---footer
+*
+*/
+
+.footer {
+    margin-top: 14rem;
+}
+
+.footer__content {
+    background-color: var(--primary-color);
+    text-align: center;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+}
+
+.footer__logo {
+    width: 12.7rem;
+    height: 6.4rem;
+    aspect-ratio: 3/3;
+    object-fit: contain;
+    margin-top: 2rem;
+}
+
+.footer__nav {
+    margin-top: 2rem;
+}
+
+.footer__nav__list {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__nav__list__item {
+    margin: 1rem;
+}
+
+.footer__nav__list__item__link {
+    text-decoration: none;
+    color: var(--color-gray);
+    font-family: var(--font-IRAN-yekan-x);
+    font-size: 1.7rem;
+    opacity: .5;
+}
+
+.footer__nav__list__item__link--active {
+    color: var(--color-white);
+    opacity: 1;
+}
+
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.footer__social__card {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__social__card__link {}
+
+.footer__social__card__link__img {
+    width: 5rem;
+    height: 5rem;
+    aspect-ratio: 3 / 3;
+    object-fit: contain;
+    margin-top: 2rem;
+    background-color: #a5a5a77a;
+    margin-left: 1rem;
+    border-radius: 1rem;
+    filter: invert(100%);
+}
+
+.footer_copy-right {
+    background-color:#3B4053 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 1rem;
+    margin: 2rem;
+    border-radius: 1rem;
+}
+
+.footer_copy-right__text {
+    color: var(--color-gray);
+}
+
+.footer__iran-web-trust {
+    display: flex;
+    align-items: center;
+}
+
+.footer__iran-web-trust__enamad-img,
+.footer__iran-web-trust__bank-img {
+    width: 10.7rem;
+    height: 7.4rem;
+    border-radius: 1.5rem;
+    margin: .6rem;
+    aspect-ratio: 3/3;
+    background-color: #fff;
+    object-fit: contain;
+}
