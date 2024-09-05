@@ -10,6 +10,7 @@ const loadingIndicator = isMobile ? document.querySelector('#mobile-search-loadi
 const searchHeader = isMobile ? document.querySelector('#mobile-search-results-header') : document.querySelector('#desktop-search-results-header');
 const searchList = isMobile ? document.querySelector('#mobile-search-results-list') : document.querySelector('#desktop-search-results-list');
 
+
 // mobile menu 
 const mobileMenuBtn = document.querySelector('.toolbar-menu-icon');
 const mobileMenuNav = document.querySelector('.mobile-nav');
@@ -163,3 +164,23 @@ document.querySelectorAll('.banner__wrapper').forEach(function (element) {
     element.style.setProperty('--bg-color', colorVariable);
 });
 
+
+/**
+ * 
+ *  FAQ drop down box
+ * 
+ */
+document.querySelectorAll('.faq-card__header').forEach(function (element) {
+    element.addEventListener('click', () => {
+        const content = element.nextElementSibling;
+        const icon = element.children[1];
+        content.classList.toggle('faq-card__content--open');
+        icon.classList.toggle('faq-card__header__icon--open');
+
+        if (content.classList.contains('faq-card__content--open')) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+            content.style.maxHeight = '0';
+        }
+    });
+});

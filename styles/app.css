@@ -859,7 +859,7 @@ body {
 
 .trusts__box__info__title {
     font-family: var(--font-IRAN-yekan-x-bold);
-    font-size: 2.1rem;
+    font-size: 2.2rem;
     font-weight: 600;
     line-height: 2.1rem;
     margin-bottom: .8rem;
@@ -896,6 +896,10 @@ body {
     font-size: 3rem;
     font-weight: 600;
     color: var(--primary-color);
+}
+
+.headline__wrapper__description {
+    font-size: 1.7rem;
 }
 
 .headline__wrapper__link {
@@ -1068,7 +1072,7 @@ body {
 
 .banner__info__description {
     font-family: var(--font-IRAN-yekan-x);
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     color: var(--primary-color);
     margin: 1rem 0 2rem 0;
 }
@@ -1195,14 +1199,14 @@ body {
 
 .weblog-card__body__title {
     font-family: var(--font-IRAN-yekan-x-bold);
-    font-size: 1.8rem;
+    font-size: 2.2rem;
 }
 
 .weblog-card__body__info {
-   margin: 2rem 0;
-   display: flex;
-   justify-content: flex-start;
-   align-items: center;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .weblog-card__body__info__data-release {
@@ -1212,7 +1216,7 @@ body {
     background-color: var(--color-accent);
     border-radius: var(--border-radius);
     padding: .9rem;
-    margin-left:.7rem ;
+    margin-left: .7rem;
 }
 
 .weblog-card__body__info__data-release__icon {
@@ -1236,9 +1240,10 @@ body {
 
 .weblog-card__body__description {
     font-family: var(--font-IRAN-yekan-x-light);
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     margin-bottom: 2rem;
     text-align: justify;
+    line-height: 3rem;
 }
 
 .weblog-card__footer {
@@ -1247,3 +1252,143 @@ body {
 }
 
 .weblog-card__footer__link {}
+
+
+/**
+*
+*   ---question
+*
+*/
+
+
+.faq {}
+
+.faq-card {
+    padding: 2rem 2rem;
+    box-shadow: 0rem 1.2rem 4.8rem 0rem rgba(0, 0, 0, 0.07);
+    border-radius: var(--border-radius);
+    margin: 2rem 0;
+}
+
+.faq-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.faq-card__header__title {
+    font-family: var(--font-IRAN-yekan-x-bold);
+    color: var(--primary-color);
+    font-size: 2.2rem;
+}
+
+.faq-card__header__icon {
+    transition: all 0.5s ease-in-out;
+}
+
+.faq-card__header__icon--open {
+    transform: rotate(180deg);
+}
+
+.faq-card__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.faq-card__content--open {
+    max-height: 30rem;
+}
+
+.faq-card__content__description {
+    margin: 2rem 0;
+    font-size: 1.7rem;
+    line-height: 3rem;
+    color: var(--primary-color);
+}
+
+
+/**
+*
+*   ---distinction
+*
+*/
+
+.distinction {}
+
+.distinction-card {
+    box-shadow: 0rem 1.2rem 4.8rem 0rem rgba(0, 0, 0, 0.07);
+    border-radius: var(--border-radius);
+    background-color: var(--color-secondary);
+    text-align: center;
+    position: relative;
+    padding: 2rem 2rem 7rem 2rem;
+}
+
+
+.distinction-card__header__title {
+    font-family: var(--font-IRAN-yekan-x-bold);
+    font-size: 2.2rem;
+    color: var(--color-white);
+}
+
+.distinction-card__header__description {
+    font-family: var(--font-IRAN-yekan-x);
+    font-size: 1.7rem;
+    color: var(--color-white);
+}
+
+
+.distinction__content {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    left: 1.4rem;
+    right: 1.4rem;
+    bottom: -5.2rem;
+}
+
+.distinction-info-card {
+    box-shadow: 0rem 1.2rem 4.8rem 0rem rgba(0, 0, 0, 0.07);
+    border-radius: var(--border-radius);
+    background-color: var(--color-white);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+}
+
+.distinction-info-card__count {
+    font-family: var(--font-IRAN-yekan-x-bold);
+    background-color: #F1F7ED;
+    font-size: 4rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #77814D;
+    border-radius: 1rem;
+    margin-left: 1rem;
+}
+
+.distinction-info-card__count__icon {
+    width: 3.4rem;
+    height: 3.4rem;
+    fill: #77814D;
+}
+
+.distinction-info-card__details {}
+
+.distinction-info-card__details__title {
+    font-family: var(--font-IRAN-yekan-x-bold);
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.distinction-info-card__details__description {
+    font-family: var(--font-IRAN-yekan-x);
+    font-size: 1.7rem;
+    color: var(--primary-color);
+}
