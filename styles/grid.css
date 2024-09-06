@@ -26,7 +26,6 @@ html {
 .row {
     display: flex;
     flex-wrap: wrap;
-    gap: 67px;
 }
 
 .col {

@@ -145,7 +145,7 @@ const swiper = new Swiper('.swiper', {
  * 
  */
 
-document.querySelectorAll('.slide-wrapper').forEach(function (element) {
+document.querySelectorAll('.swiper-slide').forEach(function (element) {
     var colorVariableName = element.getAttribute('data-color');
     var colorValue = getComputedStyle(document.documentElement).getPropertyValue(colorVariableName).trim();
     element.style.setProperty('--box-shadow-color', colorValue);
