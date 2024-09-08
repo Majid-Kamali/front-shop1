@@ -14,10 +14,7 @@
         font-size: 1.3rem;
     }
 
-    .slider-margin-top {
-        margin-top: calc(100vh - 635px);
-    }
-
+    
     /**
 
     ---toolbar
@@ -309,9 +306,7 @@
         font-size: .92rem;
     }
 
-    .slider-margin-top {
-        margin-top: calc(100vh - 634px);
-    }
+ 
 
     /**
 
@@ -458,9 +453,7 @@
 
     */
 
-    .slider-margin-top {
-        margin-top: calc(100vh - 668px);
-    }
+ 
 
 
     /**
@@ -625,9 +618,7 @@
 
     */
 
-    .slider-margin-top {
-        margin-top: calc(100vh - 707px);
-    }
+ 
 
     .btn {
         font-size: .8rem;
@@ -748,9 +739,7 @@
 
     */
 
-    .slider-margin-top {
-        /* margin-top: calc(100vh - 668px); */
-    }
+  
 
     .btn {
         border-radius: .6rem;
@@ -886,9 +875,7 @@
         display: none;
     }
 
-    .slider-margin-top {
-        margin-top: calc(100vh - 668px);
-    }
+   
 
 
     /**
