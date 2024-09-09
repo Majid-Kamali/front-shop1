@@ -659,15 +659,15 @@ body {
 .main {}
 
 .slider-section {
-    margin: 0  auto 6rem auto;
+    margin: 0 auto 6rem auto;
 }
 
 .swiper {
     height: 100vh;
+    position: relative;
 }
 
-.swiper-wrapper {
-}
+.swiper-wrapper {}
 
 .swiper-slide {
     overflow: hidden;
@@ -817,6 +817,7 @@ body {
     box-shadow: 0rem 1.2rem 4.8rem 0rem rgba(0, 0, 0, 0.07);
     border-radius: var(--border-radius);
     transition: transform .5s ease-in-out;
+
 }
 
 .trusts__box:hover {
@@ -825,17 +826,11 @@ body {
 
 
 
-.trusts__box__icon {
-    /* width: 7.3rem;
-    height: 7.3rem; */
-}
+.trusts__box__icon {}
 
 .trusts__box__icon__logo {}
 
-.trusts__box__info {
-    /* width: 24.6rem;
-    height: 5.1rem; */
-}
+.trusts__box__info {}
 
 .trusts__box__info__title {
     font-family: var(--font-IRAN-yekan-x-bold);
@@ -843,6 +838,7 @@ body {
     font-weight: 600;
     line-height: 2.1rem;
     margin-bottom: .8rem;
+    color: var(--color-text);
 }
 
 .trusts__box__info__description {
@@ -850,6 +846,7 @@ body {
     font-size: 1.7rem;
     font-weight: 400;
     line-height: 2.5rem;
+    color: var(--color-text);
 }
 
 /**
@@ -859,7 +856,7 @@ body {
 */
 
 .headline {
-    margin: 0  auto 6rem auto;
+    margin: 0 auto 6rem auto;
 }
 
 .headline__wrapper {
@@ -903,7 +900,7 @@ body {
 .headline::after {
     content: '';
     display: block;
-    margin:  2rem auto;
+    margin: 2rem auto;
     width: 80%;
     height: 0.5rem;
     background: #cac531;
@@ -917,7 +914,7 @@ body {
 */
 
 .new-product {
-    margin: 0  auto 6rem auto;
+    margin: 0 auto 6rem auto;
 }
 
 .product-card {
@@ -1028,7 +1025,7 @@ body {
 */
 
 .banner {
-    margin: 0  auto 6rem auto;
+    margin: 0 auto 6rem auto;
 }
 
 .banner__wrapper {
@@ -1158,7 +1155,7 @@ body {
 */
 
 .weblog {
-    margin: 0  auto 6rem auto;
+    margin: 0 auto 6rem auto;
 }
 
 .weblog-card {
@@ -1242,7 +1239,7 @@ body {
 
 
 .faq {
-    margin: 0  auto 6rem auto;
+    margin: 0 auto 6rem auto;
 }
 
 .faq-card {
@@ -1297,9 +1294,7 @@ body {
 */
 
 .distinction {
-    position: relative;
-    top: 0;
-    margin: 0  auto 6rem auto;
+    margin: 0 auto 6rem auto;
 }
 
 .distinction-card {
@@ -1309,6 +1304,7 @@ body {
     text-align: center;
     position: relative;
     padding: 2rem 2rem 7rem 2rem;
+    right: 0;
 }
 
 
@@ -1328,6 +1324,8 @@ body {
 .distinction__content {
     position: absolute;
     bottom: -5.2rem;
+    right: 0;
+    left: 0;
 }
 
 .distinction-info-card {
@@ -1358,7 +1356,9 @@ body {
     fill: #77814D;
 }
 
-.distinction-info-card__details {}
+.distinction-info-card__details {
+    text-align: right;
+}
 
 .distinction-info-card__details__title {
     font-family: var(--font-IRAN-yekan-x-bold);
@@ -1380,7 +1380,7 @@ body {
 */
 
 .footer {
-    margin: 12rem  auto 1rem auto;
+    margin: 12rem auto 1rem auto;
 }
 
 .footer__content {
